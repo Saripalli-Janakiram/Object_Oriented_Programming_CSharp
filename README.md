@@ -37,8 +37,9 @@ public class Car
 ```
 Once we have defined a class, we can create objects based on that class. For example, we might create a new Car object like this:
 // Syntax
+```
 Car myCar = new Car();
-
+```
 
 We can then set the properties of the object like this:
 myCar.Color = "Red";

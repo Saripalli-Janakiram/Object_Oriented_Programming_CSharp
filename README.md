@@ -5,7 +5,8 @@ Object-oriented programming (OOP) is a programming paradigm that is based on the
 C# is a popular programming language that supports OOP concepts, and it is widely used for building desktop, web, and mobile applications.
 In C#, a class is a blueprint for creating objects. It defines the properties and methods that an object will have.
 For example, if we were creating a program to represent a car, we might create a Car class that would have properties like color, make, model, and year, as well as methods like Start(), Stop(), Accelerate(), and Brake().
-Look at the example below
+Look at the example below:
+```csharp
 public class Car
 {
     public string Color { get; set; }
@@ -33,7 +34,7 @@ public class Car
         // Code to apply the brakes
     }
 }
-
+```
 Once we have defined a class, we can create objects based on that class. For example, we might create a new Car object like this:
 // Syntax
 Car myCar = new Car();

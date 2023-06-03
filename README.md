@@ -72,4 +72,42 @@ This allows for more flexible and maintainable code, as changes to the implement
 
 These concepts provide a framework for building modular, reusable, and extensible code that can model complex real-world systems and solve a wide range of problems. 
 OOP languages like C#, Java, and Python have built-in support for these concepts, making it easy for developers to write code that is organized, efficient, and easy to maintain.
+Encapsulation is one of the fundamental principles in object-oriented programming (OOP) and plays a crucial role in the C# programming language. It is the process of bundling data and methods (or functions) together into a single unit called a class, and controlling access to that class's members. The primary goal of encapsulation is to hide the internal details and complexities of an object and provide a public interface through which other objects can interact with it.
 
+In C#, encapsulation is achieved by using access modifiers to specify the accessibility of class members. There are four access modifiers in C#:
+
+1. Public: Public members are accessible from anywhere in the program. They can be accessed by instances of the class, derived classes, and other classes.
+
+2. Private: Private members are accessible only within the same class. They cannot be accessed from outside the class, including derived classes.
+
+3. Protected: Protected members are accessible within the same class and derived classes. They cannot be accessed from outside the class hierarchy.
+
+4. Internal: Internal members are accessible within the same assembly (or project). They cannot be accessed from outside the assembly.
+
+By default, class members (fields, properties, and methods) are private if no access modifier is specified. It is a common practice to make fields private and expose them through public properties, which provide controlled access to the data stored in the class.
+
+Encapsulation allows you to control how external entities interact with your class. It enables you to enforce constraints and validations on the class's internal data, ensuring data integrity and maintaining the class's state. By hiding the implementation details, you can modify the internal workings of the class without affecting other parts of the program that use the class.
+
+Here's a simple example to illustrate encapsulation in C#:
+
+```csharp
+public class Person
+{
+    private string name;  // Private field
+    
+    public string Name   // Public property
+    {
+        get { return name; }
+        set { name = value; }
+    }
+    
+    public void SayHello()  // Public method
+    {
+        Console.WriteLine("Hello, my name is " + name);
+    }
+}
+```
+
+In the example above, the `name` field is encapsulated and made private. Access to the `name` field is provided through the public `Name` property, which allows controlled access to the field. The `SayHello` method is also public, allowing other parts of the program to interact with the `Person` class and invoke the method.
+
+Encapsulation promotes code organization, enhances code reusability, and improves maintainability by providing a clear separation between the internal implementation of a class and its public interface. It also helps prevent accidental modification of data and enforces consistent usage of the class throughout the program.

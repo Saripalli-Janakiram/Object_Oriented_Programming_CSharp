@@ -1,5 +1,5 @@
 # Object_Oriented_Programming_CSharp
-# Source Genarated From Chat GPT #
+# Source Generated From Chat GPT #
 OBJECT ORIENTED PROGRAMMING USING C#
 Object-oriented programming (OOP) is a programming paradigm that is based on the concept of "objects." Objects are instances of classes, which are used to represent real-world entities and abstract concepts. 
 C# is a popular programming language that supports OOP concepts, and it is widely used for building desktop, web, and mobile applications.

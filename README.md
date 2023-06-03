@@ -6,7 +6,6 @@ C# is a popular programming language that supports OOP concepts, and it is widel
 In C#, a class is a blueprint for creating objects. It defines the properties and methods that an object will have.
 For example, if we were creating a program to represent a car, we might create a Car class that would have properties like color, make, model, and year, as well as methods like Start(), Stop(), Accelerate(), 
 and Brake().
-// Syntax
 class Car
 {
     public string Color { get; set; }

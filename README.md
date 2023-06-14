@@ -54,20 +54,18 @@ Once we have defined a class, we can create objects based on that class. For exa
 // Syntax
 ```
 Car myCar = new Car();
-```
-
-We can then set the properties of the object like this:
+//We can then set the properties of the object like this:
 myCar.Color = "Red";
 myCar.Make = "Toyota";
 myCar.Model = "Camry";
 myCar.Year = 2022;
 
-And we can call the methods of the object like this:
+//And we can call the methods of the object like this:
 myCar.Start();
 myCar.Accelerate();
 myCar.Brake();
 myCar.Stop();
-
+```
 This is just a simple example, but it illustrates the basic concepts of object-oriented programming in C#. By defining classes and creating objects based on those classes,
 we can create complex programs that model real-world systems and solve real-world problems.
 

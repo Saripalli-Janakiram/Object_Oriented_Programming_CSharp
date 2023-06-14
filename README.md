@@ -15,7 +15,7 @@ and also to override or extend them as needed.
 
 5. Abstraction: Abstraction is the concept of focusing on the essential features of an object and ignoring the details that are not relevant to its behavior. 
 This allows for more flexible and maintainable code, as changes to the implementation details of an object do not affect the way it is used by other parts of the program.
-
+# Class and Objects
 Object-oriented programming (OOP) is a programming paradigm that is based on the concept of "objects." Objects are instances of classes, which are used to represent real-world entities and abstract concepts. 
 C# is a popular programming language that supports OOP concepts, and it is widely used for building desktop, web, and mobile applications.
 In C#, a class is a blueprint for creating objects. It defines the properties and methods that an object will have.
@@ -113,3 +113,73 @@ public class Person
 In the example above, the `name` field is encapsulated and made private. Access to the `name` field is provided through the public `Name` property, which allows controlled access to the field. The `SayHello` method is also public, allowing other parts of the program to interact with the `Person` class and invoke the method.
 
 Encapsulation promotes code organization, enhances code reusability, and improves maintainability by providing a clear separation between the internal implementation of a class and its public interface. It also helps prevent accidental modification of data and enforces consistent usage of the class throughout the program.
+
+# Inheritance
+Inheritance is a fundamental concept in object-oriented programming (OOP) that allows classes to inherit properties and behaviors from other classes. In C#, inheritance enables the creation of hierarchical relationships between classes, where a derived class can inherit members (fields, properties, methods) from a base class. The derived class can also add new members or override the behavior of inherited members.
+
+In C#, inheritance is achieved using the : symbol followed by the name of the base class in the class declaration. Here's the basic syntax:
+``` Csharp 
+class DerivedClass : BaseClass
+{
+    // Additional members and overrides
+}
+
+```
+The BaseClass represents the class from which the DerivedClass inherits. The base class can itself be derived from another class, creating a chain of inheritance known as an inheritance hierarchy or class hierarchy.
+
+Let's look at an example to illustrate inheritance in C#:
+``` Csharp
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("The animal is eating.");
+    }
+}
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("The dog is barking.");
+    }
+}
+
+```
+
+In this example, we have a base class Animal and a derived class Dog. The Dog class inherits the Eat() method from the Animal class and adds its own Bark() method. Now, we can create objects of the Dog class and call both the inherited Eat() method and the Bark() method:
+
+``` csharp
+Dog dog = new Dog();
+dog.Eat();  // Output: The animal is eating.
+dog.Bark(); // Output: The dog is barking.
+```
+
+The derived class can also override the behavior of an inherited member by using the override keyword. For example, let's modify the Animal class to have a MakeSound() method and override it in the Dog class:
+
+```
+class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("The animal makes a sound.");
+    }
+}
+
+class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("The dog barks.");
+    }
+}
+```
+
+In this case, the MakeSound() method in the Animal class is marked as virtual, indicating that it can be overridden in derived classes. The MakeSound() method in the Dog class is marked as override, indicating that it is overriding the base implementation. Now, when we call the MakeSound() method on a Dog object, it will execute the overridden version:
+
+```
+Dog dog = new Dog();
+dog.MakeSound(); // Output: The dog barks.
+```
+
+In summary, inheritance in C# allows classes to inherit members from a base class and extend or modify them as needed. It promotes code reuse, abstraction, and the creation of class hierarchies, making it a powerful feature in object-oriented programming.

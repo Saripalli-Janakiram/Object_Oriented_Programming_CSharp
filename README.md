@@ -181,3 +181,20 @@ dog.MakeSound(); // Output: The dog barks.
 ```
 
 In summary, inheritance in C# allows classes to inherit members from a base class and extend or modify them as needed. It promotes code reuse, abstraction, and the creation of class hierarchies, making it a powerful feature in object-oriented programming.
+
+# Polymorphism
+Polymorphism is an important concept in object-oriented programming, including C#. It allows objects of different types to be treated as instances of a common base type. In C#, polymorphism is achieved through inheritance and method overriding.
+
+At its core, polymorphism enables you to write code that can work with objects of different classes, as long as they inherit from a common base class or implement a shared interface. This promotes code reusability and flexibility.
+
+There are two main forms of polymorphism in C#:
+
+1. Compile-time Polymorphism (Static Polymorphism):
+   This form of polymorphism is achieved through method overloading and operator overloading. Method overloading allows you to define multiple methods with the same name but different parameter lists in a class. The appropriate method is chosen based on the number, types, and order of arguments during compile-time. Operator overloading enables you to redefine the behavior of operators (+, -, *, etc.) for user-defined types.
+
+2. Runtime Polymorphism (Dynamic Polymorphism):
+   This form of polymorphism is achieved through method overriding. Method overriding occurs when a derived class provides its own implementation of a method that is already defined in its base class. The derived class overrides the base class method using the `override` keyword. At runtime, when a method is called on an object, the appropriate implementation is determined based on the actual type of the object.
+
+Runtime polymorphism is closely related to inheritance. You can create a base class with common properties and methods, and then derive multiple classes from it. These derived classes can provide their own implementations of the base class methods as needed. When you have a reference to the base class, you can assign objects of any derived class to that reference and call the overridden methods, which will be resolved dynamically at runtime.
+
+Polymorphism is a powerful tool for designing flexible and extensible code. It allows you to write generic algorithms that can work with different types of objects without having to know their specific implementations. By leveraging polymorphism, you can build modular and maintainable software systems in C#.
